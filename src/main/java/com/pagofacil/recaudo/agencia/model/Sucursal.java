@@ -18,6 +18,7 @@ public class Sucursal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, unique = true)
     private Long id;
+    private String direccion;
     @ManyToOne
     @JoinColumn(name = "agencia_id")
     private Agencia agencia;
