@@ -12,16 +12,10 @@ import javax.persistence.*;
 @ToString
 @AllArgsConstructor
 @Accessors(chain = true)
-@Table(name = "sucursales")
-public class Sucursal {
+@Table(name = "tipo_sucursal")
+public class TipoSucursal {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, unique = true)
     private Long id;
-    @ManyToOne
-    @JoinColumn(name = "agencia_id")
-    private Agencia agencia;
-    @ManyToOne
-    @JoinColumn(name = "tipo_sucursal_id")
-    private TipoSucursal tipo_sucursal;
 }
